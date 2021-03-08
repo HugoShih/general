@@ -47,7 +47,7 @@ try:
 
     st.write(df_new_clean_column)
 
-    ragic_version = st.checkbox("CSV For Ragic版本")
+    ragic_version = st.checkbox("CSV or Ragic版本")
     if ragic_version:
         csv = df_new_clean_column.to_csv(index=False)
         b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
