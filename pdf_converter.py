@@ -15,10 +15,8 @@ st.title('PDF to Excel Converter')
 
 uploaded_file = st.file_uploader("Upload Files",type=['pdf'])
 if uploaded_file is not None:
-    file_details = {"FileName":uploaded_file.name,"FileType":uploaded_file.type,"FileSize":uploaded_file.size}
-    st.write(f"FileName:{uploaded_file.name}")
-    st.write(f"FileType:{uploaded_file.type}")
-    st.write(f"FileSize:{uploaded_file.size}")
+    #file_details = {"FileName":uploaded_file.name,"FileType":uploaded_file.type,"FileSize":uploaded_file.size}
+    st.write(f"{uploaded_file.name} is successfully uploaded.")
     original_version = st.checkbox("CSV for 原始公告版本")
     ragic_version = st.checkbox("CSV for Ragic版本")
 
