@@ -21,6 +21,9 @@ if uploaded_file is not None:
 # filename = file_selector()
 # st.write('You selected `%s`' % filename)
 
+original_version = st.checkbox("CSV for 原始公告版本")
+ragic_version = st.checkbox("CSV For Ragic版本")
+
 
 try:
     pdffile=uploaded_file     #pdf檔路徑及檔名
@@ -37,9 +40,10 @@ try:
         df_stack.append(df_clean)
         
     df_concat = pd.concat(df_stack)
-    st.write(df_concat)
+    if original_version:
+        st.write(df_concat)
 
-    ragic_version = st.checkbox("CSV For Ragic版本")
+    
     if ragic_version:
         column_names = ["材料編號", "材料名稱", "物料名稱(英)", "材料規範", "單位", "備           註", "分類", "主要來源", "品牌", "原廠型號", "原廠規格"]
         df_new = df_concat.reindex(columns=column_names)
