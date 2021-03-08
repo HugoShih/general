@@ -17,13 +17,11 @@ uploaded_file = st.file_uploader("Upload Files",type=['pdf'])
 if uploaded_file is not None:
     file_details = {"FileName":uploaded_file.name,"FileType":uploaded_file.type,"FileSize":uploaded_file.size}
     st.write(file_details)
+    original_version = st.checkbox("CSV for 原始公告版本")
+    ragic_version = st.checkbox("CSV for Ragic版本")
 
 # filename = file_selector()
 # st.write('You selected `%s`' % filename)
-
-original_version = st.checkbox("CSV for 原始公告版本")
-ragic_version = st.checkbox("CSV For Ragic版本")
-
 
 try:
     pdffile=uploaded_file     #pdf檔路徑及檔名
