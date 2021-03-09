@@ -1,3 +1,4 @@
-PDF_to_Excel.ipynb
+*.ipynb
 .vscode
 .ipynb_checkpoints/*
+.virtual_documents/*
