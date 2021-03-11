@@ -60,6 +60,3 @@ def write():
 
     except AttributeError:
         st.write("選擇上傳公告")
-
-if __name__ == "__main__":
-    write()
