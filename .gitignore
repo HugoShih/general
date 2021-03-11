@@ -1,4 +1,4 @@
-*.ipynb
+jupyter_nb/*
 .vscode
 .ipynb_checkpoints/*
 .virtual_documents/*
