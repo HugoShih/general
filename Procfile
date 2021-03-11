@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run pdf_converter.py
+web: sh setup.sh && streamlit run main_page.py
